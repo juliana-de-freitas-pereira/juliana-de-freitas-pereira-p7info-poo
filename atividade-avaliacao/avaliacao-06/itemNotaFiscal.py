@@ -23,7 +23,7 @@ class ItemNotaFiscal(db.Model):
     valorUnitario = db.Column(db.Float, db.ForeignKey("TB_PRODUTO.valorUnitario"))
     valorItem = db.Column(db.Float)
 
-    nota_fiscal = db.relationship("NotaFiscal", foreign_keys=id)
+    nota_fiscal = db.relationship("NotaFiscal", foreign_keys=id_notafiscal)
     produto = db.relationship("Produto", foreign_keys=produto)
     descricao = db.relationship("Produto", foreign_keys=descricao)
     valor_unitario = db.relationship("Produto", foreign_keys=valorUnitario)
